@@ -1,4 +1,4 @@
-Here is an example of CSS code for a previous signup popup:
+Here is the CSS code for a previous signup popup:
 
 ```css
 .signup-popup {
@@ -8,60 +8,55 @@ Here is an example of CSS code for a previous signup popup:
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    z-index: 999;
 }
 
-.signup-popup.show {
-    display: flex;
-}
-
-.signup-popup .popup-container {
+.signup-popup-container {
     background-color: #fff;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    width: 300px;
-    margin: 20px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.signup-popup .popup-container .title {
+.signup-popup-header {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.signup-popup .popup-container .form {
+.signup-popup-form {
     margin-top: 20px;
 }
 
-.signup-popup .popup-container .form input[type="text"],
-.signup-popup .popup-container .form input[type="email"],
-.signup-popup .popup-container .form input[type="password"] {
+.signup-popup-form input[type="text"],
+.signup-popup-form input[type="email"],
+.signup-popup-form input[type="password"] {
     width: 100%;
-    height: 40px;
-    margin-bottom: 10px;
     padding: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
 }
 
-.signup-popup .popup-container .form input[type="submit"] {
-    width: 100%;
-    height: 40px;
+.signup-popup-form input[type="submit"] {
     background-color: #4CAF50;
     color: #fff;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.signup-popup .popup-container .form input[type="submit"]:hover {
+.signup-popup-form input[type="submit"]:hover {
     background-color: #3e8e41;
 }
 
-.signup-popup .popup-container .close-btn {
+.signup-popup-close {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -69,9 +64,7 @@ Here is an example of CSS code for a previous signup popup:
     cursor: pointer;
 }
 
-.signup-popup .popup-container .close-btn:hover {
+.signup-popup-close:hover {
     color: #4CAF50;
 }
 ```
-
-This code styles a popup container with a title, form, and close button. The popup is initially hidden and can be shown by adding the `show` class to the `.signup-popup` element.
