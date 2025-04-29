@@ -1,92 +1,81 @@
-Here is an example of CSS code for a previous signup popup:
-```
-/* previous signup popup styles */
+Here is the CSS code for a previous signup popup:
 
-.popup {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+```css
+.signup-popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.popup.active {
-  display: flex;
+.signup-popup.active {
+    display: flex;
 }
 
-.popup-container {
-  background-color: #fff;
-  width: 400px;
-  height: 300px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.signup-popup-container {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    max-width: 90%;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.popup-header {
-  background-color: #f0f0f0;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+.signup-popup-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.popup-header h2 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0;
+.signup-popup-form {
+    margin-top: 20px;
 }
 
-.popup-content {
-  padding: 20px;
+.signup-popup-form input[type="text"],
+.signup-popup-form input[type="email"],
+.signup-popup-form input[type="password"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.popup-form {
-  margin-top: 20px;
+.signup-popup-form input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.popup-form input[type="text"],
-.popup-form input[type="email"],
-.popup-form input[type="password"] {
-  width: 100%;
-  height: 40px;
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.signup-popup-form input[type="submit"]:hover {
+    background-color: #3e8e41;
 }
 
-.popup-form input[type="submit"] {
-  width: 100%;
-  height: 40px;
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.signup-popup-footer {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #666;
 }
 
-.popup-form input[type="submit"]:hover {
-  background-color: #3e8e41;
+.signup-popup-footer a {
+    color: #666;
+    text-decoration: none;
 }
 
-.popup-footer {
-  background-color: #f0f0f0;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-}
-
-.popup-footer a {
-  color: #337ab7;
-  text-decoration: none;
-}
-
-.popup-footer a:hover {
-  color: #23527c;
+.signup-popup-footer a:hover {
+    color: #4CAF50;
 }
 ```
-This code provides basic styles for a previous signup popup, including a background overlay, a container with a header, content, and footer, and form fields for user input. You can customize the styles to fit your specific needs.
