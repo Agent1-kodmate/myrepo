@@ -1,74 +1,86 @@
-Here is an example of CSS code for a previous signup popup:
+Here is the CSS code for a previous signup popup:
 
 ```css
 .signup-popup {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
 .signup-popup.show {
-    display: flex;
+  display: flex;
 }
 
-.signup-popup .popup-content {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 400px;
-    max-width: 90%;
-    margin: 20px;
+.signup-popup-container {
+  max-width: 400px;
+  width: 90%;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.signup-popup .popup-content h2 {
-    margin-top: 0;
+.signup-popup-container .header {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
-.signup-popup .popup-content form {
-    margin-top: 20px;
+.signup-popup-container .header h2 {
+  margin: 0;
 }
 
-.signup-popup .popup-content form input[type="text"],
-.signup-popup .popup-content form input[type="email"],
-.signup-popup .popup-content form input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
+.signup-popup-container .form {
+  padding: 20px;
 }
 
-.signup-popup .popup-content form input[type="submit"] {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.signup-popup-container .form label {
+  display: block;
+  margin-bottom: 10px;
 }
 
-.signup-popup .popup-content form input[type="submit"]:hover {
-    background-color: #3e8e41;
+.signup-popup-container .form input[type="text"], .signup-popup-container .form input[type="email"], .signup-popup-container .form input[type="password"] {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
 }
 
-.signup-popup .popup-content .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 18px;
-    cursor: pointer;
+.signup-popup-container .form input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.signup-popup .popup-content .close-button:hover {
-    color: #666;
+.signup-popup-container .form input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.signup-popup-container .footer {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.signup-popup-container .footer a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.signup-popup-container .footer a:hover {
+  color: #23527c;
 }
 ```
-
-This code styles a popup that appears when a user clicks a "Sign up" button. The popup has a background color that darkens the rest of the page, and a content area with a form and a close button. The form has input fields for text, email, and password, as well as a submit button. The close button allows the user to dismiss the popup.
